@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+
+  pg-engine:
+    image: postgres:13.1
+    env_file:
+      - ./.env
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+#  mongo-core:
+#    image: mongo:4.4.5
+#
+#    environment:
+#      - 'MONGO_INITDB_DATABASE=base'
+#    ports:
+#      - '27017:27017'
+
+#  redis:
+#    image: redis:6.2.2
+#    ports:
+#      - '6390:6379'
+
+volumes:
+  pgdata:
