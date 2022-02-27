@@ -1,2 +1,2 @@
-release: npm run typeorm-migration:run
+release: ./release-cli.sh
 web: npm run start:prod
